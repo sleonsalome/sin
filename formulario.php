@@ -8,7 +8,7 @@
                 <option value="pc">Prácticas</option>
                 <option value="mat">Material de clase</option>
                 <option value="trj">Trabajos</option>
-             </select>
+            </select>
         </div>
 
         <label for="selectCurso" class="col-sm-1 col-form-label">Curso:</label>
