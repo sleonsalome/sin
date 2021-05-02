@@ -13,8 +13,8 @@
 <script type="text/javascript" scr="https://cdn.datatables.net/plug-ins/1.10.24/i18n/Spanish.json"></script>
 
 <div class="table-responsive">
-    <table id="trepositorio" class="table table-bordered table-striped" style="width:100%">
-        <thead>
+    <table id="trepositorio" class="table table-striped table-hover table-bordered border-light" style="width:100%">
+        <thead class="table-dark">
             <tr style="text-align: center; font-weight: bold;">
                 <th>Nombre</th>
                 <th>Tipo</th>
