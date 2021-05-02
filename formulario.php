@@ -69,21 +69,21 @@
         </div>
 
         <label for="selectCiclo" class="col-sm-1 col-form-label">Ciclo:</label>
-            <div class="col-sm-3">
-                <select id="ciclo" name="nombreCiclo">
-                    <option value="va"></option>
-                    <option value="c1">Ciclo I</option>
-                    <option value="c2">Ciclo II</option>
-                    <option value="c3">Ciclo III</option>
-                    <option value="c4">Ciclo IV</option>
-                    <option value="c5">Ciclo V</option>
-                    <option value="c6">Ciclo VI</option>
-                    <option value="c7">Ciclo VII</option>
-                    <option value="c8">Ciclo VIII</option>
-                    <option value="c9">Ciclo IX</option>
-                    <option value="c10">Ciclo X</option>
-                </select>
-            </div>
+        <div class="col-sm-3">
+            <select id="nombreCiclo" name="nombreCiclo">
+                <option value="va"></option>
+                <option value="c1">Ciclo I</option>
+                <option value="c2">Ciclo II</option>
+                <option value="c3">Ciclo III</option>
+                <option value="c4">Ciclo IV</option>
+                <option value="c5">Ciclo V</option>
+                <option value="c6">Ciclo VI</option>
+                <option value="c7">Ciclo VII</option>
+                <option value="c8">Ciclo VIII</option>
+                <option value="c9">Ciclo IX</option>
+                <option value="c10">Ciclo X</option>
+            </select>
+        </div>
     </div>
 
 </form>
