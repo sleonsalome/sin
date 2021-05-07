@@ -160,7 +160,9 @@
 
                 <div class="row">
                     <div class="col-sm-4">
-                        <a href="logout.php" class="btn btn-danger" role="button" style="position: absolute; left: 1200px; top: 160px;">Salir</a>
+                        <a href="logout.php" type="button" class="btn btn-danger" role="button" style="position: absolute; left: 1200px; top: 160px;">
+                            <span class="fas fa-power-off"></span> Salir
+                        </a>
                     </div>
                 </div>
 

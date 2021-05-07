@@ -121,8 +121,8 @@
 
       <div class="row mb-3">
         <div class="col-sm-5 offset-sm-2">
-            <input  type="submit" value="Registrar" class="btn btn-primary" role="button">
-            <a href="login.php" class="btn btn-primary" role="button">Regresar</a>
+          <input  type="submit" value="Registrar" class="btn btn-primary" role="button">
+          <a href="login.php" class="btn btn-primary" role="button">Regresar</a>
         </div>
       </div>
 
