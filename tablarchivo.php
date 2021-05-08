@@ -2,6 +2,40 @@
     $conexion=mysqli_connect('localhost','root','','php_login_database');
 ?>
 
+<?php
+    $where="";
+            
+    if (isset($_POST['consulta'])) {
+
+        $cprograma=$_POST['nombrePrograma'];
+        $cciclo=$_POST['nombreCiclo'];
+        $ccurso=$_POST['nombreCurso'];
+
+        if (!empty($_POST['nombreCiclo']) && !empty($_POST['nombreCurso'])) {
+            $where="WHERE ciclo = '$cciclo' && curso = '$ccurso'";
+
+        } else if (!empty($_POST['nombrePrograma']) && !empty($_POST['nombreCurso'])) {
+            $where="WHERE carrera = '$cprograma' && curso = '$ccurso'";
+
+        } else if (!empty($_POST['nombrePrograma']) && !empty($_POST['nombreCiclo'])) {
+            $where="WHERE carrera = '$cprograma' &&  ciclo = '$cciclo'";
+
+        } else if (!empty($_POST['nombrePrograma'])) {
+            $where="WHERE carrera = '$cprograma'";
+
+        } else if (!empty($_POST['nombreCiclo'])) {
+            $where="WHERE ciclo = '$cciclo'";
+
+        } else if (!empty($_POST['nombreCurso'])) {
+            $where="WHERE curso = '$ccurso'";
+             
+        } else {
+            $where="WHERE carrera = '$cprograma' && ciclo = '$cciclo' && curso = '$ccurso'";
+             
+        }
+    }
+?>
+
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
@@ -29,63 +63,9 @@
         <tbody>
             <?php
 
-                if(!isset($_POST['nombreCiclo'])){ //Si aún no se ha usado el combo box o se ha seleccionado , muestra todos los resultados
-                    $msql="SELECT * from archivos";
-                    $result=mysqli_query($conexion,$msql)
-                    or die("Error en la consulta SQL");
-                }else{  //Si se ha seleccionado alguna de las demás categorías, hace el filtro.
-                    $cat=$_POST['nombreCiclo'];
-                    $cons="SELECT * FROM archivos where ciclo = '$cat'";
-                    $result=mysqli_query($conexion,$cons)
-                    or die("Error en la consulta SQL");
-                }
-
-                if(!isset($_POST['nombreMaterial'])){ //Si aún no se ha usado el combo box o se ha seleccionado , muestra todos los resultados
-                    $msql="SELECT * from archivos";
-                    $result=mysqli_query($conexion,$msql)
-                    or die("Error en la consulta SQL");
-                }else{  //Si se ha seleccionado alguna de las demás categorías, hace el filtro.
-                    $cat=$_POST['nombreMaterial'];
-                    $cons="SELECT * FROM archivos where tipo = '$cat'";
-                    $result=mysqli_query($conexion,$cons)
-                    or die("Error en la consulta SQL");
-                }
-
-                if(!isset($_POST['programa'])){ //Si aún no se ha usado el combo box o se ha seleccionado , muestra todos los resultados
-                    $msql="SELECT * from archivos";
-                    $result=mysqli_query($conexion,$msql)
-                    or die("Error en la consulta SQL");
-                }else{  //Si se ha seleccionado alguna de las demás categorías, hace el filtro.
-                    $cat=$_POST['programa'];
-                    $cons="SELECT * FROM archivos where carrera = '$cat'";
-                    $result=mysqli_query($conexion,$cons)
-                    or die("Error en la consulta SQL");
-                }
-
-                if(!isset($_POST['nombreDocente'])){ //Si aún no se ha usado el combo box o se ha seleccionado , muestra todos los resultados
-                    $msql="SELECT * from archivos";
-                    $result=mysqli_query($conexion,$msql)
-                    or die("Error en la consulta SQL");
-                }else{  //Si se ha seleccionado alguna de las demás categorías, hace el filtro.
-                    $cat=$_POST['nombreDocente'];
-                    $cons="SELECT * FROM archivos where docente = '$cat'";
-                    $result=mysqli_query($conexion,$cons)
-                    or die("Error en la consulta SQL");
-                }
-
-                if(!isset($_POST['nombreCurso'])){ //Si aún no se ha usado el combo box o se ha seleccionado , muestra todos los resultados
-                    $msql="SELECT * from archivos";
-                    $result=mysqli_query($conexion,$msql)
-                    or die("Error en la consulta SQL");
-                }else{  //Si se ha seleccionado alguna de las demás categorías, hace el filtro.
-                    $cat=$_POST['nombreCurso'];
-                    $cons="SELECT * FROM archivos where curso = '$cat'";
-                    $result=mysqli_query($conexion,$cons)
-                    or die("Error en la consulta SQL");
-                }
-
+                $msql="SELECT * from archivos $where";
+                $result=mysqli_query($conexion,$msql);
                 
-
                 while ($mostrar=mysqli_fetch_array($result)) {
 
                     $rutaDescarga = $mostrar['ruta'];

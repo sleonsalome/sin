@@ -120,7 +120,7 @@
                 position: absolute; top: 80px; left: 1150px;
             }
 
-            form { text-align: center; position: relative; top: 150px; left: 200px;}
+            form { text-align: center; position: relative; top: 175px; left: 300px;}
             
             select {
                 width: 100%;
@@ -175,13 +175,13 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <!-- Button trigger modal -->
-                        <span type="button" id="btn-modal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="text-align: center; position: absolute; top: 550px; left: 70px; ">
+                        <span type="button" id="btn-modal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="text-align: center; position: absolute; top: 650px; left: 70px; ">
                             <span class="fas fa-plus-circle"></span> Agregar
                         </span>
                     </div>
                 </div>
 
-                <div  class="container-fluid" style="position:absolute; top: 600px; left: 60px;  max-width: 90%;">
+                <div  class="container-fluid" style="position:absolute; top: 750px; left: 60px;  max-width: 90%;">
                     <div class="row-sm-12">
                         <div class="col-sm-12">
                             <div id="tablaArchivos"></div>
