@@ -1,8 +1,8 @@
 <?php
-    $server = 'localhost';
-    $username = 'root';
-    $password = '';
-    $database = 'registro_udep';
+    $server = 'sindb.cn4rjoawlm1j.us-east-2.rds.amazonaws.com';
+    $username = 'admin';
+    $password = 'qwerty21';
+    $database = 'sinudep';
 
 
     try {

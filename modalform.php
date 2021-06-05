@@ -6,7 +6,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <div class="modal-body">
+            <div class="modal-body" charset="utf-8">
 
                 <form action="repositorio.php"  method="post" enctype="multipart/form-data" class="form-inline">
                     <div class="row mb-3">
@@ -42,7 +42,7 @@
                                 <option value="Psicología">Psicología</option>
                                 <option value="Medicina">Medicina</option>
                                 <option value="Economía">Economía</option>
-                                <option value=">Historia y Gestión Cultural">Historia y Gestión Cultural</option>
+                                <option value="Historia y Gestión Cultural">Historia y Gestión Cultural</option>
                             </select>
                         </div>
                     </div>

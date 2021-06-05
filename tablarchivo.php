@@ -1,5 +1,5 @@
 <?php
-    $conexion=mysqli_connect('localhost','root','','php_login_database');
+    $conexion=mysqli_connect('sindb.cn4rjoawlm1j.us-east-2.rds.amazonaws.com','admin','qwerty21','sinudep');
 ?>
 
 <?php
@@ -72,12 +72,12 @@
             ?>
                             
             <tr>
-                <td><?php echo $mostrar['narchivo'] ?></td>
-                <td><?php echo $mostrar['tipo'] ?></td>
-                <td><?php echo $mostrar['carrera'] ?></td>
-                <td><?php echo $mostrar['curso'] ?></td>
-                <td><?php echo $mostrar['docente'] ?></td>
-                <td><?php echo $mostrar['ciclo'] ?></td>
+                <td><?php echo utf8_encode($mostrar['narchivo']) ?></td>
+                <td><?php echo utf8_encode($mostrar['tipo']) ?></td>
+                <td><?php echo utf8_encode($mostrar['carrera']) ?></td>
+                <td><?php echo utf8_encode($mostrar['curso']) ?></td>
+                <td><?php echo utf8_encode($mostrar['docente']) ?></td>
+                <td><?php echo utf8_encode($mostrar['ciclo']) ?></td>
                 <td style="text-align: center";>
                     <a href="<?php echo $rutaDescarga; ?>" download="<?php echo $rutaDescarga; ?>"  class="btn btn-warning btn-sm">
                         <span class="fas fa-download fa-lg"></span>

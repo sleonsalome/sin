@@ -1,5 +1,5 @@
 <?php
-    $conexion=mysqli_connect('localhost','root','','php_login_database');
+    $conexion=mysqli_connect('sindb.cn4rjoawlm1j.us-east-2.rds.amazonaws.com','admin','qwerty21','sinudep');
 ?>
 
 <form action="tablarchivo.php" method="post" class="form-inline">
@@ -9,14 +9,14 @@
         <div class="col-sm-5">
             <select id="nombrePrograma" name="nombrePrograma">
                 <option value=""></option>
-                <option value="Ingeniería Industrial">Ingeniería Industrial</option>
-                <option value="Administración de Empresas">Administración de Empresas</option>
-                <option value="Administración de Servicios">Administración de Servicios</option>
+                <option value="Ingenieria Industrial">Ingeniería Industrial</option>
+                <option value="Administracion de Empresas">Administración de Empresas</option>
+                <option value="Administracion de Servicios">Administración de Servicios</option>
                 <option value="Derecho">Derecho</option>
-                <option value="Psicología">Psicología</option>
+                <option value="Psicologia">Psicología</option>
                 <option value="Medicina">Medicina</option>
-                <option value="Economía">Economía</option>
-                <option value="Historia y Gestión Cultural">Historia y Gestión Cultural</option>
+                <option value="Economia">Economía</option>
+                <option value="Historia y Gestion Cultural">Historia y Gestión Cultural</option>
             </select>
         </div>
     </div>

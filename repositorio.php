@@ -64,7 +64,7 @@
                 <img class="titrep" src="img/UDEPM.png" atl="UDEPM" width="200px">
 
                 <?php if(!empty($user)): ?>
-                    <h2>Bienvenido <?= $user['nombre']; ?> <?= $name['apellido']; ?></h2>
+                    <h2>Bienvenido <?= utf8_encode($user['nombre']); ?> <?= utf8_encode($name['apellido']); ?></h2>
                     <h1>Repositorio</h1>
                 <?php else: ?>
                     <h1>Por favor ingrese bien los datos</h1>

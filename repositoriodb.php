@@ -1,8 +1,8 @@
 <?php
-    $server = 'localhost';
-    $username = 'root';
-    $password = '';
-    $database = 'registro_udep';
+    $server = 'sindb.cn4rjoawlm1j.us-east-2.rds.amazonaws.com';
+    $username = 'admin';
+    $password = 'qwerty21';
+    $database = 'sinudep';
 
 
     try {
@@ -49,10 +49,10 @@
 ?>
 
 <?php
-    $server = 'localhost';
-    $username = 'root';
-    $password = '';
-    $database = 'php_login_database';
+    $server = 'sindb.cn4rjoawlm1j.us-east-2.rds.amazonaws.com';
+    $username = 'admin';
+    $password = 'qwerty21';
+    $database = 'sinudep';
 
 
     try {
@@ -105,5 +105,5 @@
 ?>
 
 <?php
-    $conexion=mysqli_connect('localhost','root','','php_login_database');
+    $conexion=mysqli_connect('sindb.cn4rjoawlm1j.us-east-2.rds.amazonaws.com','admin','qwerty21','sinudep');
 ?>
